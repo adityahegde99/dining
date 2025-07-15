@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dining AI Web App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Dining AI Web App</h1>
+        <form action="/process_meal" method="POST">
+            <label for="month">Month (mm):</label>
+            <input type="text" id="month" name="month" required>
+
+            <label for="day">Day (dd):</label>
+            <input type="text" id="day" name="day" required>
+
+            <label for="year">Year (yyyy):</label>
+            <input type="text" id="year" name="year" required>
+
+            <label for="calorie_goal">Daily Calorie Goal:</label>
+            <input type="number" id="calorie_goal" name="calorie_goal" required>
+
+            <label for="protein_goal">Daily Protein Goal (g):</label>
+            <input type="number" id="protein_goal" name="protein_goal" required>
+
+            <label for="dietary_restrictions">Dietary Restrictions:</label>
+            <input type="text" id="dietary_restrictions" name="dietary_restrictions">
+
+            <label for="dining_hall">Which Dining Hall?</label>
+            <select id="dining_hall" name="dining_hall" required>
+                <option value="north-ave-dining-hall">North Avenue</option>
+                <option value="west-village">West Village</option>
+            </select>
+
+            <button type="submit">Get Meal Recommendations</button>
+        </form>
+    </div>
+</body>
+</html>
